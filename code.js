@@ -1,13 +1,18 @@
 function tsp_hk(distance_matrix) {
-    const n = distance_matrix.length;
+    if (distance_matrix <= 1);{
+        return 0;
+    }
     const cache={};
+    let cities = new Set([...Array(distance_matrix.length).keys()]);
+    let min = Infinity;
 
-function helper(s,i){
-    
-
-
-
-
-    
-    return -1;
 }
+
+function heldKarp(){
+
+
+}
+
+    
+   
+
