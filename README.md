@@ -49,3 +49,10 @@ reasoning, to this markdown file.
 
 
 https://www.geeksforgeeks.org/lambda-expressions-in-javascript/
+
+
+https://hevawu.github.io/blog/2021/07/23/Held-Karp-algorithm
+https://www.w3schools.com/js/js_json_stringify.asp
+
+I had to take a peek at Sean's heldKarp function, I wasn't getting the base case correct.
+https://github.com/COSC3020/tsp-held-karp-swilso59
