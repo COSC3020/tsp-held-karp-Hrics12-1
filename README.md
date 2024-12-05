@@ -46,3 +46,33 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+So, the heldKarp function looks for the minimum cost of visiting every city recursively. For each city it checks the two paths once where $n$ is the amount of cities so this gives you $2^n$. Then the key is used to cache and adds the sorted list of cities and current starting city. So it's checking the results for each subset of cities and each potential starting city. This is $n$ for the potential starting cities. So that would give you $O(n * 2^n)$ for the possible sub-cities and possible starting cities. Then there is $n$ work for each iteration of the heldKarp function when it goes over all the cities to find the shortest paths. The worst-case time complexity would be $O(n * 2^n) * O(n) = O(n^2*2^n)$ 
+
+The worst-case memory complexity would be the cache and then the recursive stack. The cache is still $O(n * 2^n)$ and the recursive stack is just $n$ for the amount of cities. So $O(n * 2^n) + O(n) = O(n * 2^n)$
+
+
+https://www.geeksforgeeks.org/lambda-expressions-in-javascript/
+
+https://compgeek.co.in/held-karp-algorithm-for-tsp/
+
+https://hevawu.github.io/blog/2021/07/23/Held-Karp-algorithm
+
+https://www.w3schools.com/js/js_json_stringify.asp
+
+I had to take a peek at Sean's heldKarp function, I wasn't getting the base case correct.
+https://github.com/COSC3020/tsp-held-karp-swilso59
+
+I was trying to use this spread operator before cities to convert to a set.
+
+```javascript
+if (cities.size === 2) {
+    const [city1, city2] = [...cities]; 
+    const result = dist[city1][city2];
+    cache[key] = result;
+    return result;
+}
+```
+
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
